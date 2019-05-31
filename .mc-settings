@@ -1,0 +1,20 @@
+{
+  "contextRoot": "",
+  "internalPort": "",
+  "internalDebugPort": "",
+  "healthCheck": "",
+  "watchedFiles": {
+    "includeFiles": [
+      ""
+    ],
+    "excludeFiles": [
+      ""
+    ]
+  },
+  "mavenProfiles": [
+    ""
+  ],
+  "mavenProperties": [
+    ""
+  ]
+}
