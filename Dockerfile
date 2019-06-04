@@ -1,5 +1,4 @@
 FROM websphere-liberty:microProfile2
-#FROM websphere-liberty@sha256:e99527c9275af659208e8ee28c9935f2f6c88cf24cf1819558578d8ddbcad112
 # Install opentracing usr feature
 USER 0
 RUN apt-get update \
