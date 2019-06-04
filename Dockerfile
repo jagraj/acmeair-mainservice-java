@@ -1,5 +1,5 @@
 FROM websphere-liberty:microProfile2
-
+#FROM websphere-liberty@sha256:e99527c9275af659208e8ee28c9935f2f6c88cf24cf1819558578d8ddbcad112
 # Install opentracing usr feature
 USER 0
 RUN apt-get update \
@@ -22,10 +22,7 @@ COPY --chown=1001:0 src/main/liberty/config/server.xml /config/server.xml
 COPY --chown=1001:0 /src/main/liberty/config/jvmbx.options /config/jvm.options
 COPY --chown=1001:0 target/acmeair-mainservice-java-2.0.0-SNAPSHOT.war /config/apps/
 
-USER root
-RUN chmod g+w /config/apps
 # https://github.com/WASdev/ci.docker/#enterprise-functionality
 ARG HTTP_ENDPOINT=true
 ARG MP_MONITORING=true
 RUN configure.sh 
-USER 1001
