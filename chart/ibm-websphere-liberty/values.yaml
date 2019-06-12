@@ -48,8 +48,8 @@ ssl:
 
 ingress:
   enabled: false
-  rewriteTarget: "/"
-  path: "/"
+  rewriteTarget: /$1
+  path: /(.*)
   host: ""
   secretName: ""
 
